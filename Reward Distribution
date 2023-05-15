@@ -1,0 +1,16 @@
+class User:
+    def __init__(self, name):
+        self.name = name
+        self.points = 0
+
+    def add_points(self, amount):
+        self.points += amount
+
+def reward_user(user, points):
+    user.add_points(points)
+    print(f"Congratulations, {user.name}! You have been rewarded with {points} points.")
+    print(f"Total points: {user.points}")
+
+# Example usage:
+user1 = User("John")
+reward_user(user1, 10)
